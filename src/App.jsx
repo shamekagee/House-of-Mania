@@ -18,17 +18,18 @@ export default function App() {
           textAlign: "center",
         }}
       >
-        <h1
-          style={{
-            color: "#7A5C4D",
-            fontSize: "4rem",
-            fontWeight: "500",
-            marginBottom: "0.5rem",
-            letterSpacing: "-2px",
-          }}
-        >
-          HOUSE OF MANIA
-        </h1>
+       <h1
+  style={{
+    color: "#7A5C4D",
+    fontSize: "clamp(2.5rem, 8vw, 4rem)",
+    fontWeight: "500",
+    marginBottom: "1rem",
+    lineHeight: "1",
+    letterSpacing: "-1px",
+  }}
+>
+  HOUSE OF MANIA
+</h1>
 
         <p
           style={{
