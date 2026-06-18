@@ -1,27 +1,20 @@
-import { useState } from "react";
-
 export default function App() {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thanks for joining the waitlist, ${email}!`);
-  };
-
   return (
     <div
       style={{
         minHeight: "100vh",
-        backgroundColor: "#F6F1EB",
+        backgroundColor: "#F5F1EC",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         padding: "2rem",
+        fontFamily: "Arial, sans-serif",
       }}
     >
       <div
         style={{
-          maxWidth: "600px",
+          width: "100%",
+          maxWidth: "700px",
           textAlign: "center",
         }}
       >
@@ -29,7 +22,9 @@ export default function App() {
           style={{
             color: "#7A5C4D",
             fontSize: "4rem",
-            marginBottom: "1rem",
+            fontWeight: "500",
+            marginBottom: "0.5rem",
+            letterSpacing: "-2px",
           }}
         >
           HOUSE OF MANIA
@@ -38,30 +33,45 @@ export default function App() {
         <p
           style={{
             color: "#7A5C4D",
-            fontSize: "1.3rem",
-            marginBottom: "1rem",
+            fontSize: "1.2rem",
+            marginBottom: "0.25rem",
           }}
         >
           Move With Confidence.
-          <br />
+        </p>
+
+        <p
+          style={{
+            color: "#7A5C4D",
+            fontSize: "1.2rem",
+            marginBottom: "2rem",
+          }}
+        >
           Wear With Intention.
         </p>
 
         <p
           style={{
             color: "#7A5C4D",
+            fontSize: "1rem",
             marginBottom: "2rem",
           }}
         >
           The Signature Collection is coming.
         </p>
 
-        <form onSubmit={handleSubmit}>
+        <form
+          action="https://houseofmania.us4.list-manage.com/subscribe/post?u=4c4117c2d860678551f9396e9&id=8ce629aeee&f_id=0017cfe9f0"
+          method="POST"
+          target="_blank"
+          style={{
+            width: "100%",
+          }}
+        >
           <input
             type="email"
+            name="EMAIL"
             placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             required
             style={{
               width: "100%",
@@ -69,6 +79,8 @@ export default function App() {
               marginBottom: "1rem",
               border: "1px solid #D9CFC7",
               borderRadius: "8px",
+              fontSize: "1rem",
+              boxSizing: "border-box",
             }}
           />
 
@@ -81,6 +93,7 @@ export default function App() {
               padding: "1rem 2rem",
               borderRadius: "999px",
               cursor: "pointer",
+              fontSize: "1rem",
             }}
           >
             Join The Waitlist
